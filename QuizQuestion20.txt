@@ -1,0 +1,124 @@
+SOLID -Design Principle devloped by Robert Martin. It is an Object-Oriented approach that is applied on software design.
+**
+**
+S- Single Responsibility Principle (SRP):- Every class must perform single functionality.A class should have only one reason to change.if we are written multiple functionality within a single class it is difficult to do modification it affect the whole class and the user is also getting affected by this.
+
+eg:- if we have to find the Area we can write multiple class.
+
+public class RectangleArea{    // only for rectangle area.
+	// functionality	
+ }
+public class SquareArea{      // only for square area.
+     // functionality
+ }
+
+In above example shows every class has single responsibility
+
+** O- Open/Closed Principle (OCP):- Our class is open for extension but closed for modification.
+**
+eg:- 
+
+public class car{
+    public void engine(){
+      sout("vintage");
+    }
+    public void sound(){
+	sout("analog")
+	}
+}
+
+public class Porsche extends car{
+      public void sound(){
+	    sout("stereo")	
+	}
+
+}
+
+## L- Liskov Substitution Principle (LSP):- A child should inherit all the properties and functionalitis of parent class.in another word a child class must perform all the task performed by parent class.
+
+eg:-
+
+public class Car{
+	public void break(){
+		sout("apply break");
+	}
+	public void start(){
+		sout("Started");
+	}
+}
+
+public class Truck etends car{
+	public void break(){
+		sout("apply break");
+	}
+	public void start(){
+		sout("Started");
+	}
+	public void music(){
+		sout("play Music");
+	}
+}
+
+## I-Interface Segregation Principle (ISP):- The name interface segregation states that we are spliting the interface to small interface.we not force client to use that method which does not required.insted of writing big interface we have to write small interfaces and implements dependent interfaces in class.
+
+
+## D- Dependency Inversion Principl (DIP):- In dependency inversion principle the one class is takecare of itself only. if one class is dependent on another class the tighter coupling is going to happen, it  difficult its maintainablity,enhancement, reusablity, if we have to do some modification it is going to be very dificult.that's why we are using this principle.
+
+##
+## Transaction:- A set of action carried out as a single atomic action.Either all actions carried out or none.
+                 it is represents a single unit of work.
+
+# The ACID properties describe the transaction management well.
+
+# A- Atomicity:- A transaction will run to completion either no changes occurred or database haschanged in a consistent manner.means either all successful or none.
+
+# C- Consistency (correctness):- Database is cosistent before the and after the transaction.
+	means sum before transaction  = sum after transaction.
+
+# I-Isolation:- Action performed by transaction will be isolated or hidden from outside the transaction.
+
+# D-Durability:- All updates done by transaction should become permanent. means once a transaction has been committed, it will remain so even in the case of power loss ,errors etc.
+
+## Try With resources :- Is a try statement that declares one or more resources.Resource is an object that must be closed after finishing the program.
+
+## KEY :- key is play important role in relational database.
+	it is used to uniquely identify any record from the table.It also used to establish relationship between 	table.
+
+# Different Type of KEY:-
+
+# Primary key:- Primary key is key which is uniquely identify the entity in table And it must holds one and only instance(one value) of entity.it cannot have null value.it cannot have multiple value also.
+
+# Candidate key:- A candidate key is an attribute or set of attributes that can uniquely identified Except primary key.the candidate keys are as strong as the primary key.
+
+# Super key:- Is a set of attribute that can uniquely identified.A super key is a superset of candidate key.
+But it is not candidate key. 
+
+# Foreign key:- foreign key is used to establish relationship between table.Foreign key are the column of the table used to point to the primary key of another table.
+
+# Alternate key:- Those Candidate which are not part of primary key is known as alternate key. Alternate key can holds one or more values.
+
+# Unique key:- it can have null value. it can have multiple values.
+
+# Compound key:- two or more columns are combined is known as compound key.
+
+# Composite key:- Whenever a primary key consists of more than one attribute,it is known composite key.This key is also known as concatenated key.
+
+# Artificial key:- The key created using arbitrarily assigned data are known as artificial keys. These keys are created when a primary key is large and complex and has no relationship with many other relations.The data values of the artificial keys are usually numbered in a serial order.
+
+## Inner Join:- The Mysql inner join is used to returns only those results from the tables that match the specified condition and hides other rows and columns.
+
+syntax:- SELECT columns
+	   FROM table1
+	   INNER join table2 ON condition1
+	   INNer join table3 ON condition2
+	   ...;
+
+## Right outer join:- A right outer join is a method of combining tables.The result includes unmatched rows from only the table that is specified right.
+
+## Left outer join:- A left outer join is a method of combining tables.The result includes unmatched rows from only one table that is specified Left.
+
+## Scanner :- it is taking for user input and it is more versatile. it creating a bi-directional communication between the software and its user.
+
+
+
+
